@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: fffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameZone.GameZoneMainController">
+   <children>
+      <ImageView fitHeight="822.0" fitWidth="700.0" layoutY="3.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/GameZone.png" />
+         </image></ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="265.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/gamepad.gif" />
+         </image>
+      </ImageView>
+      <Button fx:id="buttonHangman" layoutX="266.0" layoutY="566.0" mnemonicParsing="false" onAction="#onHangman" prefHeight="41.0" prefWidth="169.0" style="-fx-background-color: #33CCCD;" text="Hangman" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonTicTacToe" layoutX="266.0" layoutY="370.0" mnemonicParsing="false" onAction="#onTicTacToe" prefHeight="44.0" prefWidth="169.0" style="-fx-background-color: #33CCCD;" text="TicTacToe 1v1" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonHangman1" layoutX="266.0" layoutY="231.0" mnemonicParsing="false" onAction="#onHangman" prefHeight="41.0" prefWidth="169.0" style="-fx-background-color: #33CCCD;" text="Cricket" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

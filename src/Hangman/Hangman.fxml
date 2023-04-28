@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Hangman.HangmanController">
+    <children>
+        <Rectangle fx:id="rope" arcHeight="5.0" arcWidth="5.0" fill="#263159" height="50.0" layoutX="518.0" layoutY="39.0" stroke="#505050" strokeType="INSIDE" strokeWidth="0.0" width="6.0" />
+        <Rectangle fx:id="rod1" arcHeight="5.0" arcWidth="5.0" fill="#82aae3" height="255.0" layoutX="326.0" layoutY="33.0" stroke="#505050" strokeType="INSIDE" strokeWidth="0.0" width="13.0" />
+        <Pane id="buttonContainer" layoutX="9.0" layoutY="432.0" prefHeight="343.0" prefWidth="683.0" style="-fx-background-color: #5F58B2;">
+            <children>
+                <Button layoutX="23.0" layoutY="49.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #3C3A52;" text="A" textFill="#31c2c3">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="123.0" layoutY="49.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="B">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="222.0" layoutY="49.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="C">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="289.0" layoutY="49.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="D">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="377.0" layoutY="49.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="E">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="467.0" layoutY="49.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="F">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="365.0" layoutY="103.0" mnemonicParsing="false" onAction="#onClick" prefHeight="35.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="G">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="151.0" layoutY="245.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="H">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="349.0" layoutY="185.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="I">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="32.0" layoutY="162.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="J">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="117.0" layoutY="121.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="K">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="201.0" layoutY="121.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="L">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="284.0" layoutY="121.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="M">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="289.0" layoutY="172.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="N">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="448.0" layoutY="121.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="O">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="504.0" layoutY="167.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="P">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="222.0" layoutY="199.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="Q">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="439.0" layoutY="180.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="R">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="45.0" layoutY="245.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="S">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="101.0" layoutY="300.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="T">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="250.0" layoutY="255.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="U">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="337.0" layoutY="264.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="V">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="194.0" layoutY="293.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="W">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="427.0" layoutY="237.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="Y">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="489.0" layoutY="274.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="X">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="123.0" layoutY="180.0" mnemonicParsing="false" onAction="#onClick" prefHeight="34.0" prefWidth="56.0" style="-fx-background-color: #A084DC;" text="Z">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+        <Text fx:id="targetWordField" fill="#060332" layoutX="14.0" layoutY="321.0" strokeType="OUTSIDE" wrappingWidth="346.13671875">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Text>
+        <Rectangle fx:id="base" arcHeight="5.0" arcWidth="5.0" fill="#82aae3" height="35.0" layoutX="403.0" layoutY="292.0" stroke="#505050" strokeType="INSIDE" strokeWidth="0.0" width="95.0" />
+        <Rectangle fx:id="rod2" arcHeight="5.0" arcWidth="5.0" fill="#82aae3" height="13.0" layoutX="240.0" layoutY="26.0" stroke="#505050" strokeType="INSIDE" strokeWidth="0.0" width="197.0" />
+        <Circle fx:id="manHead" fill="#263159" layoutX="521.0" layoutY="104.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+        <Rectangle fx:id="manBody" arcHeight="5.0" arcWidth="5.0" fill="#263159" height="79.0" layoutX="510.0" layoutY="132.0" stroke="#505050" strokeType="INSIDE" strokeWidth="0.0" width="29.0" />
+        <Rectangle fx:id="rightHand" arcHeight="5.0" arcWidth="5.0" fill="#263159" height="58.0" layoutX="548.0" layoutY="123.0" stroke="#505050" strokeType="INSIDE" strokeWidth="0.0" width="6.0" />
+        <Rectangle fx:id="leftHand" arcHeight="5.0" arcWidth="5.0" fill="#263159" height="58.0" layoutX="495.0" layoutY="123.0" stroke="#505050" strokeType="INSIDE" strokeWidth="0.0" width="6.0" />
+        <Rectangle fx:id="leftLeg" arcHeight="5.0" arcWidth="5.0" fill="#263159" height="50.0" layoutX="504.0" layoutY="220.0" stroke="#505050" strokeType="INSIDE" strokeWidth="0.0" width="13.0" />
+        <Rectangle fx:id="rightLeg" arcHeight="5.0" arcWidth="5.0" fill="#263159" height="50.0" layoutX="536.0" layoutY="220.0" stroke="#505050" strokeType="INSIDE" strokeWidth="0.0" width="13.0" />
+        <Text fx:id="gameStatus" fill="#060332" layoutX="30.0" layoutY="96.0" strokeType="OUTSIDE" wrappingWidth="235.13671875">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Text>
+        <Text fx:id="hintBar" fill="#060332" layoutX="30.0" layoutY="184.0" strokeType="OUTSIDE" wrappingWidth="235.13671875">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>
