@@ -21,7 +21,8 @@ public class GameZoneMainController  {
     @FXML
     private Button buttonTicTacToe;
 
-
+    @FXML
+    private Button cricket;
 
     @FXML
     void onHangman(ActionEvent event) throws IOException {
@@ -41,5 +42,13 @@ public class GameZoneMainController  {
         window.show();
     }
 
+    @FXML
+    void onCricket(ActionEvent event) throws IOException {
+        Parent goToHangman = FXMLLoader.load(getClass().getResource("/Cricket/Cricket.fxml"));
+        Scene scene = new Scene(goToHangman);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
+    }
 
 }

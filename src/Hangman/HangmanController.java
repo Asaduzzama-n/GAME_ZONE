@@ -4,12 +4,19 @@ package Hangman;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -22,7 +29,10 @@ public class HangmanController {
     private Rectangle rope;
 
     @FXML
-    private Circle manHead;
+    private ImageView manHead2;
+
+//    @FXML
+//    private Circle manHead;
 
     @FXML
     private Rectangle manBody;
@@ -68,7 +78,8 @@ public class HangmanController {
 
     public void initialize(){
         rope.setVisible(false);
-        manHead.setVisible(false);
+//        manHead.setVisible(false);
+        manHead2.setVisible(false);
         manBody.setVisible(false);
         leftHand.setVisible(false);
         rightHand.setVisible(false);
@@ -137,7 +148,7 @@ public class HangmanController {
 
             wrongGuess++;
             if(wrongGuess ==1) rope.setVisible(true);
-            else if (wrongGuess ==2) manHead.setVisible(true);
+            else if (wrongGuess ==2) manHead2.setVisible(true);
             else if (wrongGuess ==3) manBody.setVisible(true);
             else if (wrongGuess ==4) leftHand.setVisible(true);
             else if (wrongGuess ==5) rightHand.setVisible(true);
@@ -149,6 +160,15 @@ public class HangmanController {
             };
         }
 
+    }
+
+    @FXML
+    void changeScreen(ActionEvent event) throws IOException {
+        Parent goToHome = FXMLLoader.load(getClass().getResource("/GameZone/GameZoneMain.fxml"));
+        Scene scene = new Scene(goToHome);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(scene);
+        window.show();
     }
 
 }
