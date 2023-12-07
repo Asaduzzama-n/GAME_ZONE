@@ -44,6 +44,8 @@ public class CricketController {
     private Label targetLabel;
     @FXML
     private ImageView score_show;
+    @FXML
+    private Label playerLabel;
 
     public int target;
     public int max_wkt = 2;
@@ -64,16 +66,26 @@ public class CricketController {
 
     public String winner;
 
+    Image fourImg = new Image(getClass().getResource("/assets/four.gif").toExternalForm());
+    Image sixImg = new Image(getClass().getResource("/assets/six.gif").toExternalForm());
+    Image wicketImg = new Image(getClass().getResource("/assets/score/wicket.png").toExternalForm());
+    Image winImg = new Image(getClass().getResource("/assets/score/trophy.gif").toExternalForm());
+    Image loseImg = new Image(getClass().getResource("/assets/score/game-over.gif").toExternalForm());
+    Image oneImg = new Image(getClass().getResource("/assets/score/oneS.gif").toExternalForm());
+    Image twoImg = new Image(getClass().getResource("/assets/score/twoS.gif").toExternalForm());
+    Image threeImg = new Image(getClass().getResource("/assets/score/threeS.gif").toExternalForm());
+    Image fiveImg = new Image(getClass().getResource("/assets/score/fiveS.gif").toExternalForm());
 
-    Image fourImg = new Image("E:\\AOOP_PROJECT\\GAME_ZONE\\src\\assets\\four.gif");
-    Image sixImg = new Image("E:\\AOOP_PROJECT\\GAME_ZONE\\src\\assets\\six.gif");
-    Image wicketImg = new Image("E:\\AOOP_PROJECT\\GAME_ZONE\\src\\assets\\score\\wicket.png");
-    Image winImg = new Image("E:\\AOOP_PROJECT\\GAME_ZONE\\src\\assets\\score\\trophy.gif");
-    Image loseImg = new Image("E:\\AOOP_PROJECT\\GAME_ZONE\\src\\assets\\score\\game-over.gif");
-    Image oneImg = new Image("E:\\AOOP_PROJECT\\GAME_ZONE\\src\\assets\\score\\oneS.gif");
-    Image twoImg = new Image("E:\\AOOP_PROJECT\\GAME_ZONE\\src\\assets\\score\\twoS.gif");
-    Image threeImg = new Image("E:\\AOOP_PROJECT\\GAME_ZONE\\src\\assets\\score\\threeS.gif");
-    Image fiveImg = new Image("E:\\AOOP_PROJECT\\GAME_ZONE\\src\\assets\\score\\fiveS.gif");
+
+//    Image fourImg = new Image("E:\\AOOP_PROJECT\\GAME_ZONE\\src\\assets\\four.gif");
+//    Image sixImg = new Image("E:\\AOOP_PROJECT\\GAME_ZONE\\src\\assets\\six.gif");
+//    Image wicketImg = new Image("E:\\AOOP_PROJECT\\GAME_ZONE\\src\\assets\\score\\wicket.png");
+//    Image winImg = new Image("E:\\AOOP_PROJECT\\GAME_ZONE\\src\\assets\\score\\trophy.gif");
+//    Image loseImg = new Image("E:\\AOOP_PROJECT\\GAME_ZONE\\src\\assets\\score\\game-over.gif");
+//    Image oneImg = new Image("E:\\AOOP_PROJECT\\GAME_ZONE\\src\\assets\\score\\oneS.gif");
+//    Image twoImg = new Image("E:\\AOOP_PROJECT\\GAME_ZONE\\src\\assets\\score\\twoS.gif");
+//    Image threeImg = new Image("E:\\AOOP_PROJECT\\GAME_ZONE\\src\\assets\\score\\threeS.gif");
+//    Image fiveImg = new Image("E:\\AOOP_PROJECT\\GAME_ZONE\\src\\assets\\score\\fiveS.gif");
 //    Image wicketImg = new Image("E:\\AOOP_PROJECT\\GAME_ZONE\\src\\assets\\score\\wicket.png");
 
 
@@ -159,6 +171,14 @@ public class CricketController {
             }
             overLabel.setText("Over: "+curr_over+"-"+ball);
 
+                if(curr_wkt == 0){
+                    playerLabel.setText(player1);
+                } else if (curr_wkt ==1) {
+                    playerLabel.setText(player1);
+                }else {
+                    playerLabel.setText(player1);
+                }
+
             if(user_score == pc_score){
                 curr_wkt ++;
                 wktLabel.setText("Wicket: "+curr_wkt);
@@ -177,19 +197,35 @@ public class CricketController {
                     pc_total = totalScore;
                 }
 
-                if(user_score == 1){
-                    score_show.setImage(oneImg);
-                }else if(user_score == 2){
-                    score_show.setImage(twoImg);
-                }else if(user_score == 3){
-                    score_show.setImage(threeImg);
-                }else if(user_score == 4){
-                    score_show.setImage(fourImg);
-                }else if(user_score == 5){
-                    score_show.setImage(fiveImg);
-                }else {
-                    score_show.setImage(sixImg);
-                }
+               if(curr_player == "player"){
+                   if(user_score == 1){
+                       score_show.setImage(oneImg);
+                   }else if(user_score == 2){
+                       score_show.setImage(twoImg);
+                   }else if(user_score == 3){
+                       score_show.setImage(threeImg);
+                   }else if(user_score == 4){
+                       score_show.setImage(fourImg);
+                   }else if(user_score == 5){
+                       score_show.setImage(fiveImg);
+                   }else {
+                       score_show.setImage(sixImg);
+                   }
+               }else{
+                   if(pc_score == 1){
+                       score_show.setImage(oneImg);
+                   }else if(pc_score == 2){
+                       score_show.setImage(twoImg);
+                   }else if(pc_score == 3){
+                       score_show.setImage(threeImg);
+                   }else if(pc_score == 4){
+                       score_show.setImage(fourImg);
+                   }else if(pc_score == 5){
+                       score_show.setImage(fiveImg);
+                   }else {
+                       score_show.setImage(sixImg);
+                   }
+               }
 
                 scoreLabel.setText("Score: "+totalScore);
             }
